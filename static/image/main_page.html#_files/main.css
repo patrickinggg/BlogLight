@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+  display: relative;
+  /* height: 100%;
+  width: 20%; */
+}
+.responsive {
+  /* margin-right: auto; */
+  /* height: 100%; */
+  /* width: auto; */
+
+}
+
+.header {
+  /* display: block; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  background-color: #f8f9fa;
+  border-bottom: 4px solid #D4DBD3;
+  /* text-align: center; */
+  /* padding-left: 45%; */
+}
+#disappear{
+ background-color: #f8f9fa;
+}
+.signout_button:hover {
+  background-color: #D4DBD3;
+}
+#avatar{
+  border-radius: 50%;
+}
+.signout_button{
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  height: 100%;
+  width: 100px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #D4DBD3;
+}
+.signout{
+  position: flex;
+  height: 50px;
+  width: 50px;
+  opacity: 0.5;
+
+}
+.followerinfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.follow{
+  font-size: .9em;
+  padding: 10px 1px;
+  text-align: center;
+  /* background-color: #E84911; */
+  width: 50%;
+  height: 40px;
+}
+.navbar-item{
+  border-top: 4px solid #D4DBD3;
+  height: 5em;
+  text-align: center;
+}
+.nav-link{
+  height: inherit;
+  font-size: 1.2em;
+  padding-top: 1.3em ;
+}
+.navbar-item:hover {
+  opacity: 0.6;
+}
+.active{
+  background-color: #D4DBD3;
+}
+.blogitem{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  list-style-type: none;
+  background-color: #11E821;
+  border: 1px solid #ababab;
+  box-shadow:1px 1px 10px #ababab;
+  border-radius:20px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+
+}
+.blog_container{
+  padding-left: 0;
+
+}
+.blogtitle{
+  font-size: 1.5em;
+  display: inline-flex;
+  width: 100%;
+}
+.blogdate{
+  display: inline-flex;
+  align-items: center;
+  width: 30%
+}
+.input-group-text{
+
+  padding-right: 1.5em;
+  margin-left: .5em;
+  margin-right: 1em;
+  width: 10%
+}
+.blogitemleft{
+  display: inline-flex;
+  width: 40%
+}

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="http://localhost:9700/static/main.css">
+
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://localhost:9700/static/shop/jquery.cookie.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="http://localhost:9700/static/JavaScript/friends_blog_page.js"></script>
+
+    <style >
+      body {
+  			background-image:url('http://localhost:9700/static/image/background.jpg');
+  			opacity:0.9;
+  			background-size: 100% 100%;
+  		}
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div id="disappear" class="signout_button"></div>
+      <a class="logo" href="#">
+        <img class="responsive" src="http://localhost:9700/static/image/logo_svg.svg" width="130px" height="60px"  alt="">
+      </a>
+      <div  id="logout" class="signout_button">   <img class="signout" src="http://localhost:9700/static/image/logout.png" width="60" height="60px"  alt=""></div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li >
+              <br />
+              <div class="greeting">
+                <h4 id="displayUsername">This is {{username}}'s blog page</h4>
+                <br />
+              </div>
+            </li>
+            <li class="userinfo">
+              <div class="avatar">
+                <img id="avatar" src="http://localhost:9700/static/image/avatar.png" width="100%" height="100%" alt="">
+              </div>
+            </li>
+            <li id="followerInfo"class="follower-info">
+              <div  class="follow">Follower: {{fanCount}}</div>
+              <div  class="follow">Following: {{followCount}}</div>
+            </li>
+            <br />
+            <li class="navbar-item">
+              <button id="follow"  type="button" class="btn btn-lg btn-outline-primary">Follow</button>
+
+            </li>
+          <li class="navbar-item">
+            <img class="icon" src="http://localhost:9700/static/image/blogicon.png"></img>
+
+            <a class="nav-link active" href="#">
+              Their Blogs
+            </a>
+          </li>
+          <li class="navbar-item">
+            <img class="icon" src="http://localhost:9700/static/image/galleryicon.png"></img>
+
+            <a id="friendsGallery"class="nav-link" href="#">
+              Their Gallery
+            </a>
+          </li>
+          <li class="navbar-item">
+            <button id="goBackToMain" type="button" class="btn btn-lg btn-outline-secondary">Go Back</button>
+
+          </li>
+          <li class="navbar-item">
+            <a id=""class="nav-link">
+            </a>
+          </li>
+          </ul>
+
+
+        </div>
+      </nav>
+
+      <main id="blogList" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Their Blogs</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+
+        </div>
+      </div>
+
+        <div class="d-flex w-100 p-3 justify-content-center post-container" id="blogContainer">
+          <div  class="d-flex w-75 h-100 flex-column mb-5 " style="margin-bottom: 0;">
+            <ul class="blog_container">
+
+              <li v-for="blog in blogs" class="blogitem">
+                <div class="blogitemleft">
+                  <div class="multi-select" style="display:none;">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </div>
+                  <a v-bind:href="blog.artid" style="color:#1f1b1b"><div class="blogtitle">
+                    {{blog.arttitle}}
+                  </div></a>
+                </div>
+                <div class="blogdate">
+                  {{blog.createtime}}
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <nav class="page_bar" aria-label="...">
+          <ul class="pagination">
+            <li class="page-item ">
+              <a v-on:click="pagePrevious()" class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item">
+              <a v-on:click="pageNext()" class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+        </main>
+    </div>
+
+    </div>
+    </body>
+    </html>
+
+
+<!--
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+    <style >
+      body {
+  			background-image:url('image/background.jpg');
+  			opacity:0.9;
+  			background-size: 100% 100%;
+  		}
+    </style>
+  </head>
+  <body>
+    <div class="header">
+  <div id="disappear" class="signout_button"></div>
+  <a class="logo" href="#">
+    <img class="responsive" src="image/logo_svg.svg" width="130px" height="60px"  alt="">
+  </a>
+  <div class="signout_button">   <img class="signout" src="image/logout.png" width="60" height="60px"  alt=""></div>
+
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li >
+          <br />
+          <div class="greeting">
+            <h4>This is {{username}}'s blog</h4>
+            <br />
+          </div>
+        </li>
+        <li class="userinfo">
+          <div class="avatar">
+            <img id="avatar" src="image/avatar.png" width="100%" height="100%" alt="">
+          </div>
+        </li>
+        <li class="followerinfo">
+          <div class="follow">Follower: 109</div>
+          <div class="follow">Following: 100</div>
+        </li>
+        <br />
+        <li class="navbar-item">
+          <button type="button" class="btn btn-lg btn-outline-primary">Follow</button>
+
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link active" href="#">
+            {{xxx}}'s Blogs
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" href="#">
+            {{xxxx}}'s Gallery
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </nav>
+
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">{{Username}}'s Blogs</h1>
+  </div>
+
+  <div class="d-flex w-100 h-100 p-3 justify-content-center">
+    <div  class="d-flex w-75 h-100 flex-column mb-5 " style="margin-bottom: 0;">
+      <ul class="blog_container">
+        <li class="blogitem">
+          <div class="blogitemleft">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+            <div class="blogtitle">
+              Blog Title 1
+            </div>
+          </div>
+          <div class="blogdate">
+            Blog Date 1
+          </div>
+        </li>
+        <li class="blogitem">
+          <div class="blogitemleft">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+            <div class="blogtitle">
+              Blog Title 2
+            </div>
+          </div>
+          <div class="blogdate">
+            Blog Date 2
+          </div>
+        </li>
+        <li class="blogitem">
+          <div class="blogitemleft">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+            <div class="blogtitle">
+              Blog Title 3
+            </div>
+          </div>
+          <div class="blogdate">
+            Blog Date 3
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="page_bar" aria-label="...">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+</div>
+</body>
+</html> -->

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="http://localhost:9700/static/main.css">
+
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://localhost:9700/static/shop/jquery.cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="http://localhost:9700/static/JavaScript/my_account.js"></script>
+
+    <style >
+      body {
+  			background-image:url('http://localhost:9700/static/image/background.jpg');
+  			opacity:0.9;
+  			background-size: 100% 100%;
+  		}
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div id="disappear" class="signout_button"></div>
+      <a class="logo" href="#">
+        <img class="responsive" src="http://localhost:9700/static/image/logo_svg.svg" width="130px" height="60px"  alt="">
+      </a>
+      <div  id="logout" class="signout_button">   <img class="signout" src="http://localhost:9700/static/image/logout.png" width="60" height="60px"  alt=""></div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li >
+              <br />
+              <div class="greeting">
+                <h4 id="displayUsername">Hi, {{username}}</h4>
+                <br />
+              </div>
+            </li>
+            <li class="userinfo">
+              <div class="avatar">
+                <img id="avatar" src="http://localhost:9700/static/image/avatar.png" width="100%" height="100%" alt="">
+              </div>
+            </li>
+            <li id="followerInfo"class="follower-info">
+              <div  class="follow">Follower: {{fanCount}}</div>
+              <div  class="follow">Following: {{followCount}}</div>
+            </li>
+            <br />
+            <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/blogicon.png"></img>
+              <a class="nav-link " id="myBlogs" href="#">
+                My Blogs
+              </a>
+            </li>
+            <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/galleryicon.png"></img>
+
+              <a class="nav-link" id="myGallery" href="#">
+                My Gallery
+              </a>
+            </li>
+            <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/followericon.png"></img>
+
+              <a class="nav-link" id="myFollowings" href="#">
+                My Followings
+              </a>
+            </li>
+            <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/followericon.png"></img>
+
+              <a class="nav-link" id="myFollowers" href="#">
+                My Followers
+              </a>
+            </li>
+            <!-- <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/blogicon.png"></img>
+
+              <a class="nav-link" id="myPoints" href="#">
+                My Points
+              </a>
+            </li> -->
+            <li class="navbar-item">
+              <img class="icon" src="http://localhost:9700/static/image/accounticon.png"></img>
+
+              <a class="nav-link active" id="myAccount" href="#">
+                My Account
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">My Account</h1>
+      </div>
+
+      <div class="w-100 h-100 p-3 d-flex justify-start">
+          <div class="account-nav-container">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Account Settings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="avatarSetting">Avatar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="passwordSetting">Password</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="account-setting-container flex-column justify-center">
+            <h3 class="h3 pb-2 ml-4 setting-bar ">  Account Settings</h3>
+            <div class="under-setting-bar d-flex justify-content-between">
+              <div class="form-left">
+
+              </div>
+              <div class="form-container">
+
+                <form class="form-signup" id="formUpdate">
+
+                  <label for="inputEmail" >Email address</label>
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" readonly autofocus>
+                  <small id="emailHint" class="form-text text-muted">You cannot change your email</small>
+
+                  <br />
+                  <label for="inputUsername" >Username</label>
+                  <input type="username" name="usr" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                  <small id="usernameHint" class="form-text text-muted">Username must be more than 6 characters long</small>
+                  <br />
+                  <br />
+
+                  <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Update</button>
+
+                </form>
+              </div>
+              <div class="form-right">
+
+              </div>
+            </div>
+
+
+          </div>
+      </div>
+      </main>
+    </div>
+
+    </div>
+    </body>
+    </html>

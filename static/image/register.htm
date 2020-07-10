@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://localhost:9700/register?email=ian.nabney%40bristol.ac.uk&usr=Liusongsong&pwd=11111111 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="./register_files/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="./register_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="./register_files/register.js" charset="utf-8"></script>
+
+		<style>
+
+		body {
+			background-image:url('static/image/background.jpg');
+			opacity:0.9;
+			background-size: 100% 100%;
+			height: 500px;
+		}
+		.form-signup {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<form class="form-signup" id="formSignup">
+			<center><img class="mb-4" src="./register_files/logo_svg.svg" alt="" width="80%" height="45%"></center>
+		  <center><h5 class="h3 mb-3 font-weight-normal">Register for an account</h5></center>
+
+		  <label for="inputEmail">Email address</label>
+		  <input name="email" type="email" id="inputEmail" class="form-control" value="1@222" placeholder="Email address" required="" autofocus="">
+			<small id="emailHint" class="form-text text-muted" style="color: red; display: none;"></small>
+
+			<br>
+			<label for="inputUsername">Username</label>
+		  <input name="usr" type="username" id="inputUsername" value="1222222" class="form-control" placeholder="Username" required="" autofocus="">
+			<small id="usernameHint" class="form-text text-muted" style="display: none;">Username must be more than 6 characters long</small>
+			<br>
+		  <label for="inputPassword">Password</label>
+		  <input type="password" id="inputPassword" value="11111111" class="form-control" placeholder="Password" required="">
+			<small id="passwordHint" class="form-text text-muted" style="display: none;"><font color="red">Password should be between 8 and 15 characters</font></small>
+			<br>
+			<label for="confirmPassword">Comfirm Password</label>
+		  <input name="pwd" type="password" id="confirmPassword" value="11111111" class="form-control" placeholder="Please confirm password" required="">
+			<small id="confirmPwdHint" class="form-text" style="color: red; display: none;">Confirm password must match with the previous password.</small>
+
+			<br>
+			<br>
+
+		  <button class="btn btn-lg btn-primary btn-block" type="submit" id="registerSubmit" disabled="">Register</button>
+
+		</form>
+	</div>
+	
+
+</body></html>

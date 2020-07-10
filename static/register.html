@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="static/javaScript/register.js" charset="utf-8"></script>
+
+		<style>
+
+		body {
+			background-image:url('static/image/background.jpg');
+			opacity:0.9;
+			background-size: 100% 100%;
+			height: 500px;
+		}
+		.form-signup {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+		</style>
+	</head>
+	<body >
+		<div class="container">
+		<form class="form-signup"  id="formSignup">
+			<center><img class="mb-4" src="static/image/logo_svg.svg" alt="" width="80%" height="45%"></center>
+		  <center><h5 class="h3 mb-3 font-weight-normal">Register for an account</h5></center>
+
+		  <label for="inputEmail" >Email address</label>
+		  <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+			<small id="emailHint" class="form-text text-muted" ></small>
+
+			<br />
+			<label for="inputUsername" >Username</label>
+		  <input name="usr" type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+			<small id="usernameHint" class="form-text text-muted">Username must be more than 6 characters long</small>
+			<br />
+		  <label for="inputPassword">Password</label>
+		  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<small id="passwordHint" class="form-text text-muted">Password must be more than 8 characters long</small>
+			<br />
+			<label for="confirmPassword">Comfirm Password</label>
+		  <input name="pwd" type="password" id="confirmPassword"  class="form-control" placeholder="Please confirm password" required>
+			<small id="confirmPwdHint" class="form-text" ></small>
+
+			<br />
+			<br />
+
+		  <button class="btn btn-lg btn-primary btn-block" type="submit" id="registerSubmit">Register</button>
+
+		</form>
+	</div>
+	</body>
+</html>

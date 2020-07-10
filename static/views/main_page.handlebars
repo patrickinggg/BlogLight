@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+    <script type="text/javascript" src="javaScript/main_page.js"></script>
+
+    <style >
+      body {
+  			background-image:url('image/background.jpg');
+  			opacity:0.9;
+  			background-size: 100% 100%;
+  		}
+    </style>
+  </head>
+  <body>
+
+
+    <div class="header">
+      <div id="disappear" class="signout_button"></div>
+      <a class="logo" href="#">
+        <img class="responsive" src="image/logo_svg.svg" width="130px" height="60px"  alt="">
+      </a>
+      <div class="signout_button">   <img class="signout" src="image/logout.png" width="60" height="60px"  alt=""></div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li >
+              <br />
+              <div class="greeting">
+                <h4>Hi, {{username}}</h4>
+                <br />
+              </div>
+            </li>
+            <li class="userinfo">
+              <div class="avatar">
+                <img id="avatar" src="image/avatar.png" width="100%" height="100%" alt="">
+              </div>
+            </li>
+            <li class="followerinfo">
+              <div class="follow">Follower: 109</div>
+              <div class="follow">Following: 100</div>
+            </li>
+            <br />
+            <li class="navbar-item">
+              <a class="nav-link active" href="#">
+                My Blogs
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="#">
+                My Gallery
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="#">
+                My Friends
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="#">
+                My Points
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="#">
+                My Account
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">My Blogs</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-3">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Select</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-primary">Write A Blog</button>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 ml-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex w-100 h-100 p-3 justify-content-center">
+        <div  class="d-flex w-75 h-100 flex-column mb-5 " style="margin-bottom: 0;">
+          <ul class="blog_container">
+            <li class="blogitem">
+              <div class="blogitemleft">
+                <div class="input-group-text">
+                  <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+                <div class="blogtitle">
+                  Blog Title 1
+                </div>
+              </div>
+              <div class="blogdate">
+                Blog Date 1
+              </div>
+            </li>
+            <li class="blogitem">
+              <div class="blogitemleft">
+                <div class="input-group-text">
+                  <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+                <div class="blogtitle">
+                  Blog Title 2
+                </div>
+              </div>
+              <div class="blogdate">
+                Blog Date 2
+              </div>
+            </li>
+            <li class="blogitem">
+              <div class="blogitemleft">
+                <div class="input-group-text">
+                  <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+                <div class="blogtitle">
+                  Blog Title 3
+                </div>
+              </div>
+              <div class="blogdate">
+                Blog Date 3
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="page_bar" aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    </div>
+  </body>
+  </html>

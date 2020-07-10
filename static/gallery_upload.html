@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="http://localhost:9700/static/main.css">
+    <title></title>
+    <style >
+      body {
+  			background-image:url('http://localhost:9700/static/image/background.jpg');
+  			opacity:0.9;
+  			background-size: 100% 100%;
+  		}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://localhost:9700/static/shop/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://localhost:9700/static/JavaScript/gallery_upload.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div id="disappear" class="signout_button"></div>
+      <a class="logo" href="#">
+        <img class="responsive" src="http://localhost:9700/static/image/logo_svg.svg" width="130px" height="60px"  alt="">
+      </a>
+      <div  id="logout" class="signout_button">   <img class="signout" src="http://localhost:9700/static/image/logout.png" width="60" height="60px"  alt=""></div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      <div class="title-bar d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">You are editing an image</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="date_added">
+          </div>
+            <button class="btn btn-outline-success my-2 ml-2 my-sm-0" type="submit" id="goBackToGallery">Go Back</button>
+
+        </div>
+      </div>
+
+      <div class="d-flex w-100 h-100 p-3 justify-content-center">
+        <div  class="d-flex w-75 h-100 flex-column mb-5 " style="margin-bottom: 0;">
+          <form id="formSubmitImage">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Title</label>
+              <input  class="form-control" name="title" id="title" placeholder="Enter a title for your image">
+            </div>
+            <div class="form-group">
+              <label for="imgaeDescription">Description</label>
+              <textarea class="form-control" name="picContent" id="picContent" rows="1" placeholder="Give a short discription to the image"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Who can see it</label>
+              <select class="form-control" id="permit" name="permit">
+                <option value="1">Everyone</option>
+                <option value="2">My Followers</option>
+                <option value="3">Only Myself</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="FormControlFile1">Select Image (Acceptable formats are: JPG, GIF and PNG images)</label>
+              <input type="file"  class="form-control-file" id="FormControlFile1" accept=".jpg, .gif, .png">
+            </div>
+            <center>
+              <div class="image-preview" id="imagePreview">
+                <img id="uploaded_image"class="img-holder" src="" alt="Image Preview" />
+                <span class="image-preview__default-text" id="defaultText">Image Preview</span>
+              </div>
+            </center>
+            <br>
+            <button type="submit" id="submitButton" class="btn btn-primary mb-2">Publish</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </body>
+</html>
