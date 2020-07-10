@@ -1,4 +1,4 @@
-Author: Patrick Liu(sl17143)    Frank Chen(sc17141) 
+Author: Patrick Liu    Frank Chen
 Project: SSO, Blog and Shop
 ===========================
 Server:
