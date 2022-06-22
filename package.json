@@ -4,7 +4,7 @@
   "description": "web blog system",
   "main": "user_controller.js",
   "dependencies": {
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "async-lock": "^1.2.4",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
